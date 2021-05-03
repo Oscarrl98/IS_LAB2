@@ -1,5 +1,9 @@
 # IS_LAB2
 Repositiro para el laboratorio NO 2 del curso Ingenieria de Software
+## Descripcion del proyecto
+
+Este proyecto es un conjunto de artefactos independientes, programado con Spring Boot Framework, siendo llamados todos estos dentro de el artifacto Menu Principal.
+A continuacion se muestra una lista de los artifactos:
 
 * [Menu Pricipal](https://github.com/Oscarrl98/IS_LAB2/tree/main/mainp) - *mainp* - Menu principal con links de las demas calculadoras
 * [Calculadora Grafica](https://github.com/Oscarrl98/IS_LAB2/tree/main/graphicalculator) - *graphicalculator* - Artefacto de la calculadora grafica de funciones basicas
