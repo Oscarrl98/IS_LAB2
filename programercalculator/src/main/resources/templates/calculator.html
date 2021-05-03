@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <title>ProgramerCalculator</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+</head>
+<body bgcolor="#009933">
+
+<div class="jumbotron text-center">
+    <h1>Calculadora Estandar</h1>
+</div>
+<form action="#" th:action="@{/calculatorpg}" th:object="${operationModel}" method="POST">
+<hr size=20>
+<h3>Binario</h3>
+    <div class="input-group mb-3">
+        <span class="input-group-text">Binario</span>
+        <input type="number"  class="form-control" aria-label="Username" th:field="*{a}">
+    </div>
+    <p>
+        <input type="submit" class="button" value="Decimal" name="bd"/>
+        <input type="submit" class="button" value="Octal" name="bo"/>
+        <input type="submit" class="button" value="Hexadecimal" name="bh"/>
+    </p>
+     <p th:text="'Resultado = ' + ${resultb}" />
+<hr size=20>
+<h3>Decimal</h3>
+    <div class="input-group mb-3">
+            <span class="input-group-text">Decimal</span>
+            <input type="number" class="form-control" aria-label="Username" th:field="*{b}">
+        </div>
+        <p>
+            <input type="submit" class="button" value="Binario" name="db"/>
+            <input type="submit" class="button" value="Octal" name="do"/>
+            <input type="submit" class="button" value="Hexadecimal" name="dh"/>
+        </p>
+        <p th:text="'Resultado= ' + ${resultd}"/>
+<hr size=20>
+<h3>Hexadecimal</h3>
+        <div class="input-group mb-3">
+                <span class="input-group-text">Hexadecimal</span>
+                <input type="text" class="form-control" aria-label="Username" th:field="*{h}">
+            </div>
+            <p>
+                <input type="submit" class="button" value="Decimal" name="hd"/>
+                <input type="submit" class="button" value="Octal" name="ho"/>
+                <input type="submit" class="button" value="Binario" name="hb"/>
+            </p>
+            <p th:text="'Resultado= ' + ${resulth}"/>
+<hr size=20>
+<h3>Octal</h3>
+            <div class="input-group mb-3">
+                            <span class="input-group-text">Octal</span>
+                            <input type="number" class="form-control" aria-label="Username" th:field="*{c}">
+                        </div>
+                        <p>
+                            <input type="submit" class="button" value="Decimal" name="od"/>
+                            <input type="submit" class="button" value="Binario" name="ob"/>
+                            <input type="submit" class="button" value="Hexadecimal" name="oh"/>
+                        </p>
+                        <p th:text="'Resultado= ' + ${resulto}"/>
+                        <hr size=20>
+
+    </form>
+</body>
+</html>
